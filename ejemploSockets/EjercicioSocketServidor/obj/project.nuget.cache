@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AgRffVhfWznHCzT2MUn3k80NIfFNedEGqpnFbs18YQBLivA9bPNrzsBp7y/WVcAAT6FIoo8994GpsCIaRu1T0A==",
+  "dgSpecHash": "wOhP1YXiVQpMuCbrhBQTifhclt4nEsnQg+y7c1mBevjhuqxhcI/gOU2i8NGhAq2nfNHHzoqdAG7SOv2k4TOTqQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\52228\\source\\repos\\EjemploSockets\\EjercicioSocketServidor\\EjercicioSocketServidor.csproj",
+  "projectFilePath": "C:\\Users\\52228\\Documents\\git\\ejemploSockets\\ejemploSockets\\EjercicioSocketServidor\\EjercicioSocketServidor.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

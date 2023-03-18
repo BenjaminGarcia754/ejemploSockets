@@ -22,27 +22,28 @@ namespace EjercicioSocketCliente
             try
             { 
                 socketCliente.Connect(direccionServidor);
-                Console.WriteLine("Conexion realizada con exito al servidor...");
+                Console.WriteLine("Conexión realizada con éxito al servidor...");
                 string mensaje = "";
                 do
                 {
-                    //Envio
+                    Console.WriteLine("Empece el DO");
+                    //Envió
                     Console.WriteLine("Escribe el mensaje para enviarse al servidor: ");
                     mensaje = Console.ReadLine();
                     byte[] bytesMensaje = Encoding.ASCII.GetBytes(mensaje);
                     socketCliente.Send(bytesMensaje);
 
-                    //Recepcion
+                    //Recepción
                     int numeroBytesRecibidos = socketCliente.Receive(BytesEntrada);
                     string respuestaServidor = Encoding.ASCII.GetString(BytesEntrada, 0 , numeroBytesRecibidos);
                     Console.WriteLine("Respuesta servidor: " + respuestaServidor);
                 }while (!mensaje.ToLower().Equals("salir"));
                 socketCliente.Shutdown(SocketShutdown.Both);
                 socketCliente.Close();
-                Console.WriteLine("Conexion cerrada con el servidor");
+                Console.WriteLine("Conexión cerrada con el servidor");
             }catch (Exception ex)
             {
-                Console.WriteLine("Error en la conexion/comunicacion con el servidor: " + ex.Message);
+                Console.WriteLine("Error en la conexión/comunicación con el servidor: " + ex.Message);
 
             }
         }

@@ -22,31 +22,37 @@ namespace EjercicioSocketServidor
             socketServidor.Listen();
             Console.WriteLine("Servidor listo para recibir conexion");
         try{
-
+                string mensaje = "";
+                string mensajeRespuesta = "";
                 Socket socketClienteRemoto = socketServidor.Accept();
                 Console.WriteLine("Cliente conectado correctamente");
-                string mensaje = "";
                 do
                 {
                     //Recibiendo Informacion
                     byte[] BytesEntrada = new byte[1024];
                     int numeroBytesEntrada = socketClienteRemoto.Receive(BytesEntrada, 0, BytesEntrada.Length, 0);
                     mensaje = Encoding.ASCII.GetString(BytesEntrada);
-                    Console.WriteLine("El mensaje del cliente es : " + mensaje);
-
-                    //Enviando Informacion
-                    String mensajeRespuesta = "Mensaje recibido en el servidor";
-                    byte[] bytesMensajeRespuesta = Encoding.ASCII.GetBytes(mensajeRespuesta);
-                    socketClienteRemoto.Send(bytesMensajeRespuesta);
+                    Console.WriteLine(mensaje);
+                        Console.WriteLine("El mensaje del cliente es : " + mensaje);
+                    if(mensaje.ToLower() == "salir")
+                    {
+                        Console.WriteLine("El cliente cerro la conexion");
+                        break;
+                    }
+                        //Enviando Informacion
+                        Console.WriteLine("Escribe el mensaje para enviarse al cliente: ");
+                        mensajeRespuesta = Console.ReadLine();
+                        byte[] bytesMensajeRespuesta = Encoding.ASCII.GetBytes(mensajeRespuesta);
+                        socketClienteRemoto.Send(bytesMensajeRespuesta);    
                 } while (!mensaje.ToLower().Equals("salir"));
 
                 //Cerrando la conexion
+                socketServidor.Shutdown(SocketShutdown.Both);
                 socketServidor.Close();
-
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 Console.WriteLine("Cierre de conexion...");
-                Console.WriteLine(ex.ToString());
             }
             Console.WriteLine("Fin de la ejecucion de servidor...");
         }

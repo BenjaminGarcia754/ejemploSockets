@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\52228\\source\\repos\\EjemploSockets\\EjercicioSocketCliente\\EjercicioSocketCliente.csproj": {}
+    "C:\\Users\\52228\\Documents\\git\\ejemploSockets\\ejemploSockets\\EjercicioSocketCliente\\EjercicioSocketCliente.csproj": {}
   },
   "projects": {
-    "C:\\Users\\52228\\source\\repos\\EjemploSockets\\EjercicioSocketCliente\\EjercicioSocketCliente.csproj": {
+    "C:\\Users\\52228\\Documents\\git\\ejemploSockets\\ejemploSockets\\EjercicioSocketCliente\\EjercicioSocketCliente.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\52228\\source\\repos\\EjemploSockets\\EjercicioSocketCliente\\EjercicioSocketCliente.csproj",
+        "projectUniqueName": "C:\\Users\\52228\\Documents\\git\\ejemploSockets\\ejemploSockets\\EjercicioSocketCliente\\EjercicioSocketCliente.csproj",
         "projectName": "EjercicioSocketCliente",
-        "projectPath": "C:\\Users\\52228\\source\\repos\\EjemploSockets\\EjercicioSocketCliente\\EjercicioSocketCliente.csproj",
+        "projectPath": "C:\\Users\\52228\\Documents\\git\\ejemploSockets\\ejemploSockets\\EjercicioSocketCliente\\EjercicioSocketCliente.csproj",
         "packagesPath": "C:\\Users\\52228\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\52228\\source\\repos\\EjemploSockets\\EjercicioSocketCliente\\obj\\",
+        "outputPath": "C:\\Users\\52228\\Documents\\git\\ejemploSockets\\ejemploSockets\\EjercicioSocketCliente\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\52228\\AppData\\Roaming\\NuGet\\NuGet.Config",
